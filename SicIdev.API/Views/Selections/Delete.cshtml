@@ -1,0 +1,248 @@
+﻿@model SicIdev.API.Models.Selection
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Selection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agent.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Libelle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departement.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departement.Designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Domaine.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Domaine.Designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Natureao.Nature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Natureao.Nature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origineao.Origine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origineao.Origine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pays.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pays.Designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriseEnCharge.Libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriseEnCharge.Libelle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Typeao.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Typeao.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Projet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Projet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProvenantDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProvenantDe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Echeance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Echeance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateConnaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateConnaissance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ville)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ville)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DomaineActivite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomaineActivite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Connu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Connu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Commentaires)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Commentaires)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadreDeConcertation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadreDeConcertation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementInfos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementInfos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Partenaire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Partenaire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisaChefService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisaChefService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateVisaCs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateVisaCs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisaServiceCom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisaServiceCom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateVisaCom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateVisaCom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisaDg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisaDg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateVisaDg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateVisaDg)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

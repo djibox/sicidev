@@ -1,0 +1,96 @@
+﻿@model IEnumerable<SicIdev.API.Models.Selection>
+
+@{
+    ViewBag.Title = "Accueil";
+}
+
+<h2>
+    @Html.ActionLink("Nouvelle FSAO", "Create")
+</h2>
+
+<div class="row">
+    <table class="table table-bordered table-responsive table-hover">
+        <caption class="table-bordered alert alert-info" style="font-size: x-large">Généralités</caption>
+
+        <tr>
+
+            <th>
+                Client
+            </th>
+            <th>
+                Département
+            </th>
+            <th>
+                Domaine
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Natureao.Nature)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origineao.Origine)
+            </th>
+            <th>
+                Pays
+            </th>
+            <th>
+                Prise en charge
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typeao.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Projet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProvenantDe)
+            </th>
+
+            <th>Administrer</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.Libelle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departement.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Domaine.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Natureao.Nature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Origineao.Origine)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pays.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriseEnCharge.Libelle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Typeao.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Projet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProvenantDe)
+                </td>
+                <td>
+                    @Html.ActionLink("Modifier", "Edit", new {id = item.Id}) |
+                    @Html.ActionLink("Détail", "Details", new { id = item.Id })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+

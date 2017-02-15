@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SicIdev.API.Models.Domaine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Accueil</h2>
+
+<p>
+    @Html.ActionLink("Créer", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Département
+        </th>
+        <th>
+            Domaine Concerné
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departement.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

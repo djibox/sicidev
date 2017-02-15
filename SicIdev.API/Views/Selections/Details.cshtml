@@ -1,0 +1,248 @@
+﻿@model IEnumerable<SicIdev.API.Models.Selection>
+
+
+@{
+    ViewBag.Title = "Accueil";
+}
+
+<h2>
+    @Html.ActionLink("Nouvelle FSAO", "Create")
+</h2>
+
+<div class="row">
+    <table class="table table-bordered">
+        <caption class="table-bordered alert alert-info" style="font-size: x-large">Généralités</caption>
+
+        <tr>
+            <th>
+                Enregistrer par
+            </th>
+            <th>
+                Client
+            </th>
+            <th>
+                Département
+            </th>
+            <th>
+                Domaine
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Natureao.Nature)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origineao.Origine)
+            </th>
+            <th>
+                Pays
+            </th>
+            <th>
+                Prise en charge
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typeao.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Projet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProvenantDe)
+            </th>
+
+            <th>Administrer</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Agent.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.Libelle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departement.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Domaine.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Natureao.Nature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Origineao.Origine)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pays.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriseEnCharge.Libelle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Typeao.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Projet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProvenantDe)
+                </td>
+                <td>
+                    @Html.ActionLink("Modifier", "Edit", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+
+<div class="row">
+    <table class="table table-bordered">
+        <caption class="table-bordered alert alert-info" style="font-size: x-large">Gestion</caption>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Echeance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateConnaissance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ville)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DomaineActivite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Connu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commentaires)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CadreDeConcertation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComplementInfos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partenaire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observations)
+            </th>
+            <th>
+                Administrer
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Echeance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateConnaissance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ville)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DomaineActivite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Connu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Commentaires)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CadreDeConcertation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComplementInfos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Partenaire)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observations)
+                </td>
+                <td>
+                    @Html.ActionLink("Modifier", "Edit", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+<div class="row">
+    <table class="table table-bordered">
+        <caption class="table-bordered alert alert-info" style="font-size: x-large">Visa</caption>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VisaChefService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateVisaCs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VisaServiceCom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateVisaCom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VisaDg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateVisaDg)
+            </th>
+            <th>Administrer</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VisaChefService)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateVisaCs)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VisaServiceCom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateVisaCom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VisaDg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateVisaDg)
+                </td>
+                <td>
+                    @Html.ActionLink("Modifier", "Edit", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
